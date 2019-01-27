@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title parent() ~ 'User Create' %}
+
+{% block content %}
+    {{ parent() }}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock content %}

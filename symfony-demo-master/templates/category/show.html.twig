@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title parent() ~ 'Category' %}
+
+{% block content %}
+    <h1>{{ category.title|e }}</h1>
+    <ul>
+        {% for video in category.videos %}
+            <li>
+                {{ include('video/detail.html/twig', {'video' : video}) }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

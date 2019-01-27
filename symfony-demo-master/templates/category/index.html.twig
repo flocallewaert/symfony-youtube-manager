@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title parent() ~ 'Category' %}
+
+{% block content %}
+    <h1>Categories</h1>
+    <ul>
+        {% for category in categories %}
+            <li>
+                {{ include('category/detail.html/twig', {'category' : category}) }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

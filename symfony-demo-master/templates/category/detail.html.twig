@@ -1,0 +1,8 @@
+<article>
+    <h1>
+        <a href="{{ path('category_title', {'title', category.title}) }}">
+            {{ category.title|e }}
+        </a>
+    </h1>
+    <p>({{ category.description is empty ? "No description." : category.description|e }})</p>
+</article>

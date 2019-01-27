@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block title parent() %}
+{# AS ANONYMOUS
+* - list of videos
+*   => link detail video page
+*   => link author page
+*   => link categories page
+* - list of all categories
+#}
+{% block content %}
+    <section>
+        <h1>Published Videos</h1>
+        <ul>
+            {% for video in publishedVideos %}
+                <li>
+                    {{ include('video/detail.html/twig', {'video' : video}) }}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h1>Categories</h1>
+        <ul>
+            {% for video in publishedVideos %}
+                <li>
+                    {{ include('video/detail.html/twig', {'video' : video}) }}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock content %}

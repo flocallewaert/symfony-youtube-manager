@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block title parent() ~ 'User Profile' %}
+
+{% block body %}
+    <h1>User Profile #{{ user.id }}</h1>
+    <ul>
+        <li>Name: {{ user.firstname|e|lower }} {{ user.lastname|e|upper }}</li>
+        <li>Mail: {{ user.email|e }}</li>
+        <li>Birthday: {{ user.birthday is empty ? "[NOT ADDED]" : user.birthday|date('F j, Y') }}</li>
+    </ul>
+{% endblock body %}

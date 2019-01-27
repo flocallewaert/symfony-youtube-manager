@@ -1,0 +1,6 @@
+<article>
+    <a href="{{ path('user_id', {'id', user.id}) }}">
+        {{ user.firstname|e|lower }} {{ user.lastname|e|upper }}
+    </a>
+    <p>({{ user.birthday is empty ? "No birthday specified." : user.birthday|date('F j, Y') }})</p>
+</article>
